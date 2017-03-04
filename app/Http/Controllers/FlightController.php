@@ -39,7 +39,7 @@ class FlightController extends Controller
     public function Flights()
     {
         $flights = Flight::query()->orderBy('created_at','DESC')
-            ->where('enddate','>',Carbon::now())->get();
+            ->get();
 
         return view('flights/all', compact('flights'));
     }
