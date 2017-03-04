@@ -19,6 +19,7 @@
             <u><h3>Travel deals</h3></u>
         </div>
     </div>
+    <div id="kayakSearchWidgetContainer"></div>
     <div class="col-md-12" style="float:left;">
         <div class="row">
 
@@ -102,4 +103,21 @@
 
 
 
+    <script type="text/JavaScript" src="https://www.kayak.com/affiliate/widget.js"></script>
+<script type="text/JavaScript">
+    KAYAK.embed({
+        container: document.getElementById("#kayakSearchWidgetContainer"),
+        autoPosition: true,
+        defaultProduct: "hotels",
+        enabledProducts: ["hotels", "flights"],
+        startDate: "2015-12-24"
+        endDate: "2016-01-3"
+        origin: "New York, NY",
+        destination: "Boston, MA",
+        baseURL: "www.kayak.co.uk",
+        ssl: true,
+        affiliateId: "acme_rpco"
+    });
+
+</script>
 @endsection
