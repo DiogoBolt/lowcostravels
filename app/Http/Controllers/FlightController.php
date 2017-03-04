@@ -38,7 +38,9 @@ class FlightController extends Controller
 
     public function Flights()
     {
-        $flights = Flight::query()->get();
+        $flights = Flight::query()->orderBy('created_at','DESC')
+            ->where('enddate','>',Carbon::now())->get();
+
         return view('flights/all', compact('flights'));
     }
 
@@ -155,6 +157,15 @@ class FlightController extends Controller
 
         $flight->save();
 
+    }
+
+    public function newFlights()
+    {
+        $flights = Flight::query()->orderBy('created_at','DESC')
+            ->take(4)
+            ->get();
+
+        return json_encode($flights);
     }
 
 

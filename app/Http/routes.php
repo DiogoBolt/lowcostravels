@@ -11,13 +11,14 @@
 |
 */
 
-Route::get('/','FlightController@publicView');
+Route::get('/','FlightController@flights');
 
 
 Route::auth();
-Route::get('/flights', 'FlightController@flights');
+
 Route::get('/flights/{id}', 'FlightController@showFlight');
 Route::get('/flightsbyzone/{zone}', 'FlightController@getByZone');
+Route::get('/newflights', 'FlightController@newFlights');
 
 
 

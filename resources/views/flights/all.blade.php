@@ -13,12 +13,12 @@
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4 style="display:inline"><i class="fa fa-fw fa-check"></i>{{$flight->name}}</h4><div style="float:right;color:green;"><h3 style="line-height:0px;">{{$flight->price}}€</h3></div>
+                  <a href="/flights/{{$flight->id}}">  <h4 style="display:inline"><i class="fa fa-fw fa-check"></i>{{$flight->name}}</h4><div style="float:right;color:green;"><h3 style="line-height:0px;margin-top:10px">{{$flight->price}}€</h3></div></a>
                 </div>
                 <div class="panel-body">
-                    <p>{{$flight->description}}</p>
                     <div style="text-align:center"><img src="{{ URL::to('/').'/'.$flight->picture }}" width="200px" height="200px"></div>
-                   <div style="margin-top:20px;" align="right"> <a href="#" class="btn btn-default">Learn More</a></div>
+                     <div style="margin-top:20px;display:inline-block" align="right"> <a href="#" class="btn btn-default">Book Now</a></div>
+                    <div style="margin-top:20px;display:inline;float:right" align="left"><h4>{{date('Y-m-d H:i',strtotime($flight->created_at))}}</h4></div>
                 </div>
             </div>
         </div>
