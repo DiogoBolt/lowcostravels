@@ -23,11 +23,12 @@
         <div class="row">
 
             @foreach($newflights as $newflight)
-                <div align="center" class="col-lg-3">
+                <div align="center" class="col-lg-12">
 
-                    <h3><center>{{$newflight->name}}</center></h3>
-                    <p> <a href="/flights/{{$newflight->id}}"> <img src="{{ URL::to('/').'/'.$newflight->picture }}" width="250px" height="250px"></a> </p>
-                    <h3 style="color: darkgreen"><center>{{$newflight->price}}€</center></h3>
+                    <h2>{{$newflight->name}}:{{$newflight->price}}€</h2>
+
+                    <div style="float:left">  <a href="/flights/{{$newflight->id}}"> <img src="{{ URL::to('/').'/'.$newflight->picture }}" width="250px" height="250px"></a></div>
+                    <div style="float:left;padding-left:20px"> <h4 style="color:dimgrey">{{$newflight->description}}</h4></div>
 
                 </div>
 
