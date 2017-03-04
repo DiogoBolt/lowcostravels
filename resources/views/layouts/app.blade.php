@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
 
-    <title>One Page Wonder - Start Bootstrap Template</title>
+    <title>Low Cost Travels</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Travel Cheap</a>
+                <a class="navbar-brand" href="/">LowCosTravels</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -52,7 +52,7 @@
                         <a href="#">About</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Serviços</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >World</a>
 
                         <ul class="dropdown-menu">
 
@@ -65,6 +65,8 @@
                         </ul>
 
                     </li>
+
+
                     <li>
                         <a href="#">Contact</a>
                     </li>

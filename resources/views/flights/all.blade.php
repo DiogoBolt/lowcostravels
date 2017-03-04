@@ -3,42 +3,76 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Low Cost Travels
+            </h1>
+        </div>
+
+        @foreach($flights as $flight)
+        <div class="col-md-4">
             <div class="panel panel-default">
-                <div style="color:pink;background-color:dimgray" class="panel-heading">Clientes</div>
-
-                <div class="panel-body">
-                    <table class="table table-hover table-striped table-condensed table-bordered">
-                        <tr>
-                            <th>Nome</th>
-                            <th>Descricao</th>
-                            <th>Data Fim</th>
-                            <th>Preço</th>
-                            <th>Continente</th>
-
-                        </tr>
-                        @foreach($flights as $flight)
-                            <tr>
-                                <td><a href="/flights/{{$flight->id}}">{{$flight->name}}</a></td>
-                                <td><a href="/flights/{{$flight->id}}">{{$flight->description}}</a></td>
-                                <td><a href="/flights/{{$flight->id}}">{{$flight->enddate}}</a></td>
-                                <td><a href="/flights/{{$flight->id}}">{{$flight->price}}€</a></td>
-                                <td><a href="/flights/{{$flight->id}}">{{$flight->zone}}</a></td>
-                            </tr>
-                        @endforeach
-
-                    </table>
-
-                    <a href="/newflight">New Flight</a>
+                <div class="panel-heading">
+                    <h4 style="display:inline"><i class="fa fa-fw fa-check"></i>{{$flight->name}}</h4><div style="float:right;color:green;"><h3 style="line-height:0px;">{{$flight->price}}€</h3></div>
                 </div>
+                <div class="panel-body">
+                    <p>{{$flight->description}}</p>
+                    <div style="text-align:center"><img src="{{ URL::to('/').'/'.$flight->picture }}" width="200px" height="200px"></div>
+                   <div style="margin-top:20px;" align="right"> <a href="#" class="btn btn-default">Learn More</a></div>
+                </div>
+            </div>
+        </div>
+            @endforeach
 
+    </div>
+    <!-- /.row -->
 
+    <!-- Portfolio Section -->
 
-</div>
+    <!-- /.row -->
 
+    <!-- Features Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Modern Business Features</h2>
+        </div>
+        <div class="col-md-6">
+            <p>The Modern Business template by Start Bootstrap includes:</p>
+            <ul>
+                <li><strong>Bootstrap v3.3.7</strong>
+                </li>
+                <li>jQuery v1.11.1</li>
+                <li>Font Awesome v4.2.0</li>
+                <li>Working PHP contact form with validation</li>
+                <li>Unstyled page elements for easy customization</li>
+                <li>17 HTML pages</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+        </div>
+        <div class="col-md-6">
+            <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Call to Action Section -->
+    <div class="well">
+        <div class="row">
+            <div class="col-md-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
             </div>
         </div>
     </div>
+
+    <hr>
+
+
+</div>
 
 
 
