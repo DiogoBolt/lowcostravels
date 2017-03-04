@@ -24,6 +24,12 @@
                            {{ Form::text('zone', null, ['class' => 'form-control']) }}
 
                        </div>
+
+                       <div class="form-group">
+                           {{ Form::label('Country', 'country') }}
+                           {{ Form::text('country', null, ['class' => 'form-control']) }}
+
+                       </div>
                        <div class="form-group">
                            {{ Form::label('price', 'price') }}
                            {{ Form::text('price', null, ['class' => 'form-control']) }}

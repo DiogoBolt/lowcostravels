@@ -24,7 +24,8 @@ Route::get('/flights/{id}','FlightController@view');
 Route::get('/highlightflights','FlightController@highLightFlights');
 Route::post('/highlightflight','FlightController@highlightFlight');
 Route::get('/flightsbyzone/{zone}','FlightController@getByZone');
-
+Route::get('/flights/edit/{id}','FlightController@editFlight');
+Route::post('/editflight','FlightController@saveFlight');
 
 
 

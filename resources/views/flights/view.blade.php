@@ -10,9 +10,10 @@
                 <div class="panel-body">
                     <table class="table table-hover table-striped table-condensed table-bordered">
                         <tr>
-                            <th>Where</th>
-                            <th>From</th>
-                            <th>Continent</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>zone</th>
+                            <th>Country</th>
                             <th>Price</th>
 
                         </tr>
@@ -20,11 +21,12 @@
                                 <td>{{$flight->name}}</td>
                                 <td>{{$flight->description}}</td>
                                 <td>{{$flight->zone}}</td>
+                                <td>{{$flight->country}}</td>
                                 <td>{{$flight->price}}€</td>
                         </tr>
                     </table>
 
-                    <center>  <img src="{{ URL::to('/').'/'.$flight->picture }}" width="900px" height="500px"></center>
+                    <center>  <img src="{{ URL::to('/').'/'.$flight->picture }}" width="300px" height="300px"></center>
                 </div>
             </div>
 

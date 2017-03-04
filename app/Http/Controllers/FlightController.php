@@ -57,12 +57,15 @@ class FlightController extends Controller
         $flight->enddate = $inputs['enddate'];
         $flight->price = $inputs['price'];
         $flight->zone=$inputs['zone'];
+        $flight->country=$inputs['country'];
         $destinationFileName = $flight->enddate.$flight->name.'.'.$request->file('picture')->getClientOriginalExtension();
         $request->file('picture')->move(
            public_path(), $destinationFileName);
         $flight->picture =  $destinationFileName;
 
             $flight->save();
+
+        return redirect()->action('FlightController@publicView');
 
     }
 
@@ -77,17 +80,17 @@ class FlightController extends Controller
 
     public function publicView()
     {
-        $flights = Flight::query()
-        ->where('enddate','>',Carbon::today())
-        ->get()
-        ->sortBy('enddate')
-        ->take(4);
+//        $flights = Flight::query()
+//        ->where('enddate','>',Carbon::today())
+//        ->get()
+//        ->sortBy('enddate')
+//        ->take(4);
         $newflights=Flight::query()->orderBy('created_at','DESC')
             ->take(4)
             ->get();
 
 
-        return view('flights/welcome',compact('flights','newflights'));
+        return view('flights/welcome',compact('newflights'));
     }
 
     public function highLightFlights()
@@ -113,10 +116,38 @@ class FlightController extends Controller
     public function getByZone($zone)
     {
 
-        $flights = Flight::query()->where('zone','=',$zone)->get();
+        $flights = Flight::query()->where('zone','=',$zone)->orderBy('created_at','DESC')->get();
 
 
-        return view('flights/europe',compact('flights') );
+        return view('flights/zone',compact('flights') );
+    }
+
+    public function editFlight($id)
+    {
+        $flight = Flight::where('id','=',$id)->first();
+
+        return view('flights/edit',compact('flight') );
+    }
+
+    public function saveFlight(Request $request)
+    {
+        $inputs = $request->all();
+
+
+        $flight = Flight::where('id','=',$inputs['flightid'])->first();
+        $flight->name = $inputs['name'];
+        $flight->description = $inputs['description'];
+        $flight->enddate = $inputs['enddate'];
+        $flight->price = $inputs['price'];
+        $flight->zone=$inputs['zone'];
+        $flight->country=$inputs['country'];
+        $destinationFileName = $flight->enddate.$flight->name.'.'.$request->file('picture')->getClientOriginalExtension();
+        $request->file('picture')->move(
+            public_path(), $destinationFileName);
+        $flight->picture =  $destinationFileName;
+
+        $flight->save();
+
     }
 
 

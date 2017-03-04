@@ -352,6 +352,7 @@ class ComposerStaticInit6d446404908e05301887119872d7c27a
     public static $classMap = array (
         'AddFlights' => __DIR__ . '/../..' . '/database/migrations/2017_02_20_102409_add_flights.php',
         'AddZoneToFlight' => __DIR__ . '/../..' . '/database/migrations/2017_02_23_172017_add_zone_to_flight.php',
+        'Adicionarcountry' => __DIR__ . '/../..' . '/database/migrations/2017_03_03_221600_adicionarcountry.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
