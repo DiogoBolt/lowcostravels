@@ -100,6 +100,13 @@ class FlightController extends Controller
         return view('flights/highlights',compact('flights'));
     }
 
+    public function showFlight($id)
+    {
+        $flight = Flight::where('id','=',$id)->first();
+
+        return view('flights/showflight',compact('flight'));
+    }
+
     public function highlightFlight(Request $request)
     {
         $flightid = $request->get('flight');
