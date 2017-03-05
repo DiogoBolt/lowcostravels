@@ -8,6 +8,10 @@
                 Low Cost Travels
             </h1>
         </div>
+        <form action="/" method="post">
+            <input type="text" name="search">
+            <button class="btn btn-default" type="submit">Search</button>
+        </form>
 
         @foreach($flights as $flight)
         <div class="col-md-4">

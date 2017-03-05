@@ -36,11 +36,17 @@ class FlightController extends Controller
 
     }
 
-    public function Flights()
+    public function Flights(Request $request)
     {
-        $flights = Flight::query()->orderBy('created_at','DESC')
-            ->get();
-
+        $inputs = $request->all();
+        if(isset($inputs['search']))
+        {
+            $flights = Flight::query()->orderBy('created_at','DESC')->where('name', 'like', '%' . $inputs['search'] . '%')
+                ->get();
+        }else {
+            $flights = Flight::query()->orderBy('created_at', 'DESC')
+                ->get();
+        }
         return view('flights/all', compact('flights'));
     }
 
