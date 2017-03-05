@@ -19,10 +19,29 @@
             </div>
             <div style="margin-top:15px;float:right;" > <a href="#" class="btn btn-default">Book Now</a></div>
         </div>
-    </div>
 
+
+    </div>
+    <div id="newflights" style="position:absolute;right:100px; width:100px; top:60px;">
+
+    </div>
 </div>
 
 
 @endsection
 
+<script>
+    setInterval(function(){
+        $.getJSON( "/newflights", function( data ) {
+        $('#newflights').empty();
+
+        for(flight in data)
+        {
+
+            $('#newflights').append(' <div class="panel panel-default"> <div class="panel-heading" style="font-size:12px;"> <i class="fa fa-fw fa-check"></i>'+ data[flight].name+'<div style="font-size:10px;float:right;color:green;">'+ data[flight].price +'€</div> </div> <a href=/flights/'+data[flight].id+'> <div class="panel-body" style="height:80px;"><img src=/'+encodeURI(data[flight].picture)+ ' width=60px height=60px></div>');
+
+
+        }
+    }); }, 5000);
+
+</script>
