@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/','FlightController@flights');
+Route::any('/','FlightController@flights');
 
 
 Route::auth();
