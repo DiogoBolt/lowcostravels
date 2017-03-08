@@ -350,6 +350,8 @@ class ComposerStaticInit6d446404908e05301887119872d7c27a
     );
 
     public static $classMap = array (
+        'AddFacebookshare' => __DIR__ . '/../..' . '/database/migrations/2017_03_08_224552_add_facebookshare.php',
+        'AddFacebookshareToFlights' => __DIR__ . '/../..' . '/database/migrations/2017_03_08_224308_add_facebookshare_to_flights.php',
         'AddFlights' => __DIR__ . '/../..' . '/database/migrations/2017_02_20_102409_add_flights.php',
         'AddZoneToFlight' => __DIR__ . '/../..' . '/database/migrations/2017_02_23_172017_add_zone_to_flight.php',
         'Adicionarcountry' => __DIR__ . '/../..' . '/database/migrations/2017_03_03_221600_adicionarcountry.php',

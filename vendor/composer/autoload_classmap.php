@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddFacebookshare' => $baseDir . '/database/migrations/2017_03_08_224552_add_facebookshare.php',
+    'AddFacebookshareToFlights' => $baseDir . '/database/migrations/2017_03_08_224308_add_facebookshare_to_flights.php',
     'AddFlights' => $baseDir . '/database/migrations/2017_02_20_102409_add_flights.php',
     'AddZoneToFlight' => $baseDir . '/database/migrations/2017_02_23_172017_add_zone_to_flight.php',
     'Adicionarcountry' => $baseDir . '/database/migrations/2017_03_03_221600_adicionarcountry.php',
