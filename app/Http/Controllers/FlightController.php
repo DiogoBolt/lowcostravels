@@ -66,6 +66,7 @@ class FlightController extends Controller
         $flight->price = $inputs['price'];
         $flight->zone=$inputs['zone'];
         $flight->country=$inputs['country'];
+        $flight->facebookshare=$inputs['facebookshare'];
         $destinationFileName = $flight->enddate.$flight->name.'.'.$request->file('picture')->getClientOriginalExtension();
         $request->file('picture')->move(
            public_path(), $destinationFileName);
@@ -156,6 +157,7 @@ class FlightController extends Controller
         $flight->price = $inputs['price'];
         $flight->zone=$inputs['zone'];
         $flight->country=$inputs['country'];
+        $flight->facebookshare=$inputs['facebookshare'];
         $destinationFileName = $flight->enddate.$flight->name.'.'.$request->file('picture')->getClientOriginalExtension();
         $request->file('picture')->move(
             public_path(), $destinationFileName);

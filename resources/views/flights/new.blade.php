@@ -43,6 +43,10 @@
                            {{ Form::label('picture', 'picture') }}
                            <input type="file" name="picture">
                        </div>
+                       <div class="form-group">
+                           {{ Form::label('Facebookshare', 'facebookshare') }}
+                           {{ Form::text('facebookshare', null, ['class' => 'form-control']) }}
+                       </div>
 
                        <div class="form-group">
                            <button type="submit" class="btn btn-info">Criar Cliente</button>
