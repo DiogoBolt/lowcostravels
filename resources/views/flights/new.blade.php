@@ -47,6 +47,10 @@
                            {{ Form::label('Facebookshare', 'facebookshare') }}
                            {{ Form::text('facebookshare', null, ['class' => 'form-control']) }}
                        </div>
+                       <div class="form-group">
+                           {{ Form::label('Url', 'url') }}
+                           {{ Form::text('url', null, ['class' => 'form-control']) }}
+                       </div>
 
                        <div class="form-group">
                            <button type="submit" class="btn btn-info">Criar Cliente</button>

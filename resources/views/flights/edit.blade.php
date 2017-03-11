@@ -42,7 +42,14 @@
                            {{ Form::label('picture', 'picture') }}
                            <input type="file" name="picture">
                        </div>
-
+                       <div class="form-group">
+                           {{ Form::label('url', 'url') }}
+                           <input name="url" class="form-control" type="text" value="{{$flight->url}}">
+                       </div>
+                       <div class="form-group">
+                           {{ Form::label('Facebookshare', 'facebookshare') }}
+                           <input name="facebookshare" class="form-control" type="text" value="{{$flight->facebookshare}}">
+                       </div>
                        <input type="hidden" name="flightid" value="{{$flight->id}}">
 
                        <div class="form-group">

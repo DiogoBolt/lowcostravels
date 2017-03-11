@@ -36,6 +36,18 @@ class FlightController extends Controller
 
     }
 
+    private function time2string($timeline) {
+        $periods = array( 'hour' => 3600,'minute' => 60);
+        $ret='';
+        foreach($periods AS $name => $seconds){
+            $num = floor($timeline / $seconds);
+            $timeline -= ($num * $seconds);
+            $ret .= $num.' '.$name.(($num > 1) ? 's' : '').' ';
+        }
+
+        return trim($ret);
+    }
+
     public function Flights(Request $request)
     {
         $inputs = $request->all();
@@ -45,8 +57,12 @@ class FlightController extends Controller
                 ->get();
         }else {
             $flights = Flight::query()->orderBy('created_at', 'DESC')
-                ->get();
+                ->get()->each(function($flight){
+                    $flight->tempo = $this->time2string(strtotime(date('y-m-d H:i:s'))-strtotime($flight->created_at));
+                }
+                );
         }
+
         return view('flights/all', compact('flights'));
     }
 
@@ -66,6 +82,7 @@ class FlightController extends Controller
         $flight->price = $inputs['price'];
         $flight->zone=$inputs['zone'];
         $flight->country=$inputs['country'];
+        $flight->url=$inputs['url'];
         $flight->facebookshare=$inputs['facebookshare'];
         $destinationFileName = $flight->enddate.$flight->name.'.'.$request->file('picture')->getClientOriginalExtension();
         $request->file('picture')->move(
@@ -74,33 +91,14 @@ class FlightController extends Controller
 
             $flight->save();
 
-        return redirect()->action('FlightController@publicView');
+        return redirect('/');
 
     }
 
-    public function view($id)
-    {
-        $flight = Flight::query()->where('id','=',$id)->first();
 
 
-        return view('flights/view', compact('flight'));
-    }
 
 
-    public function publicView()
-    {
-//        $flights = Flight::query()
-//        ->where('enddate','>',Carbon::today())
-//        ->get()
-//        ->sortBy('enddate')
-//        ->take(4);
-        $newflights=Flight::query()->orderBy('created_at','DESC')
-            ->take(4)
-            ->get();
-
-
-        return view('flights/welcome',compact('newflights'));
-    }
 
     public function highLightFlights()
     {
@@ -112,7 +110,7 @@ class FlightController extends Controller
     public function showFlight($id)
     {
         $flight = Flight::where('id','=',$id)->first();
-
+        $flight->tempo = $this->time2string(strtotime(date('y-m-d H:i:s'))-strtotime($flight->created_at));
         return view('flights/showflight',compact('flight'));
     }
 
@@ -135,7 +133,7 @@ class FlightController extends Controller
         $flights = Flight::query()->where('zone','=',$zone)->orderBy('created_at','DESC')->get();
 
 
-        return view('flights/zone',compact('flights') );
+        return view('flights/all',compact('flights') );
     }
 
     public function editFlight($id)
@@ -157,6 +155,7 @@ class FlightController extends Controller
         $flight->price = $inputs['price'];
         $flight->zone=$inputs['zone'];
         $flight->country=$inputs['country'];
+        $flight->url=$inputs['url'];
         $flight->facebookshare=$inputs['facebookshare'];
         $destinationFileName = $flight->enddate.$flight->name.'.'.$request->file('picture')->getClientOriginalExtension();
         $request->file('picture')->move(

@@ -18,6 +18,15 @@
     <!-- Custom CSS -->
     <link href="/css/one-page-wonder.css" rel="stylesheet">
 
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=332782890067229";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,18 +35,29 @@
     <script src="/js/jquery.js"></script>
 
 
+
     <![endif]-->
 
-
+    <style>
+        .navbar a{
+            color:black !important;
+        }
+        .panel-heading a{
+            color:black !important;
+        }
+         .navbar :focus{
+            background-color:white !important;
+        }
+    </style>
     </head >
 
     <body id="app-layout">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:lightblue;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div  class="navbar-header">
+            <div  class="navbar-header" >
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -86,7 +106,7 @@
             <footer>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>Copyright © Your Website 2014</p>
+                        <p>Copyright © Low Cost Travels 2017</p>
                     </div>
                 </div>
             </footer>

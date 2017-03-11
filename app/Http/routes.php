@@ -30,7 +30,6 @@ route::group(['middleware'=>'auth'],function() {
     Route::get('backoffice/highlightflights', 'FlightController@highLightFlights');
     Route::get('backoffice/newflight', 'FlightController@newFlight');
     Route::post('/createflight', 'FlightController@createFlight');
-    Route::get('backoffice/flights/{id}', 'FlightController@view');
     Route::post('/highlightflight', 'FlightController@highlightFlight');
     Route::get('backoffice/flights/edit/{id}', 'FlightController@editFlight');
     Route::post('/editflight', 'FlightController@saveFlight');
