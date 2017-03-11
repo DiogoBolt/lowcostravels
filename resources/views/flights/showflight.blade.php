@@ -6,7 +6,7 @@
     <div class="col-md-12" style="padding:10px;" align="center">
 
         <div class="panel panel-default" style="width:500px;">
-            <div class="panel-heading" align="left" style="background-color:lightblue">
+            <div class="panel-heading" align="left" style="background-color:#ebebeb">
                 <h4 style="display:inline"><i class="fa fa-fw fa-check"></i>{{$flight->name}}</h4><div style="float:right;color:green;"><h3 style="line-height:0px;margin-top:10px">{{$flight->price}}€</h3></div>
             </div>
             <div class="panel-body" style="height:300px;background-color:lightgrey">

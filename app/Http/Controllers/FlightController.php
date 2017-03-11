@@ -54,7 +54,10 @@ class FlightController extends Controller
         if(isset($inputs['search']))
         {
             $flights = Flight::query()->orderBy('created_at','DESC')->where('name', 'like', '%' . $inputs['search'] . '%')
-                ->get();
+                ->get()->each(function($flight){
+                    $flight->tempo = $this->time2string(strtotime(date('y-m-d H:i:s'))-strtotime($flight->created_at));
+                }
+                );
         }else {
             $flights = Flight::query()->orderBy('created_at', 'DESC')
                 ->get()->each(function($flight){

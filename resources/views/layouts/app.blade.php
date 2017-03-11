@@ -39,22 +39,18 @@
     <![endif]-->
 
     <style>
-        .navbar a{
-            color:black !important;
-        }
+
         .panel-heading a{
             color:black !important;
         }
-         .navbar :focus{
-            background-color:white !important;
-        }
+
     </style>
     </head >
 
     <body id="app-layout">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:lightblue;">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div  class="navbar-header" >
@@ -69,9 +65,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >World</a>
 
@@ -85,11 +79,6 @@
 
                         </ul>
 
-                    </li>
-
-
-                    <li>
-                        <a href="#">Contact</a>
                     </li>
                 </ul>
             </div>
