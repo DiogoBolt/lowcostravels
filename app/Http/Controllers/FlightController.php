@@ -84,7 +84,7 @@ class FlightController extends Controller
         $flight->country=$inputs['country'];
         $flight->url=$inputs['url'];
         $flight->facebookshare=$inputs['facebookshare'];
-        $destinationFileName = $flight->enddate.$flight->name.'.'.$request->file('picture')->getClientOriginalExtension();
+        $destinationFileName = $request->file('picture')->getClientOriginalName();
         $request->file('picture')->move(
            public_path(), $destinationFileName);
         $flight->picture =  $destinationFileName;
@@ -157,7 +157,7 @@ class FlightController extends Controller
         $flight->country=$inputs['country'];
         $flight->url=$inputs['url'];
         $flight->facebookshare=$inputs['facebookshare'];
-        $destinationFileName = $request->file('picture')->getFilename().$request->file('picture')->getClientOriginalExtension();
+        $destinationFileName = $request->file('picture')->getClientOriginalName();
         $request->file('picture')->move(
             public_path(), $destinationFileName);
         $flight->picture =  $destinationFileName;
