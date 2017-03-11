@@ -21,7 +21,7 @@
                 </div>
                 <div class="panel-body" style="background-color:lightgrey">
                     <a href="/flights/{{$flight->id}}"> <div style="text-align:center"><img src="{{ URL::to('/').'/'.$flight->picture }}" width="200px" height="200px"></div></a>
-                     <div style="margin-top:20px;display:inline-block" align="right"> <a href="http://{{$flight->url}}" target="_blank" class="btn btn-primary">Book Now</a></div>
+                     <div style="margin-top:20px;display:inline-block" align="right"> <a href="{{$flight->url}}" target="_blank" class="btn btn-primary">Book Now</a></div>
                     {{--<div style="margin-top:20px;display:inline;float:right" align="left"><h4>{{date('Y-m-d H:i',strtotime($flight->created_at))}}</h4></div>--}}
                     <div style="margin-top:20px;display:inline;float:right;font-size:10px" align="left">{{$flight->tempo}} ago</div>
                 </div>

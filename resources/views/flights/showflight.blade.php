@@ -17,7 +17,7 @@
                 </div>
                 <div style="margin-top:20px;display:inline;float:right;font-size:10px" >{{$flight->tempo}} ago</div>
             </div>
-            <div style="margin-top:15px;float:right;" > <a href="http://{{$flight->url}}" target="_blank"class="btn btn-primary">Book Now</a></div>
+            <div style="margin-top:15px;float:right;" > <a href="{{$flight->url}}" target="_blank"class="btn btn-primary">Book Now</a></div>
         </div>
 
         <div id="fb-root"></div>
