@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
+
             <div class="panel panel-default">
                 <div style="color:orange;background-color:dimgray" class="panel-heading">{{$flight->name}}</div>
 
@@ -27,6 +28,7 @@
                     </table>
 
                     <center>  <img src="{{ URL::to('/').'/'.$flight->picture }}" width="300px" height="300px"></center>
+
                 </div>
             </div>
 

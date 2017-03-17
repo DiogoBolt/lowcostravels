@@ -91,8 +91,13 @@ class FlightController extends Controller
         $request->file('picture')->move(
            public_path(), $destinationFileName);
         $flight->picture =  $destinationFileName;
+        $image1 = $request->file('image1')->getClientOriginalName();
+        $request->file('image1')->move(
+            public_path(), $image1);
+        $flight->affiliatepic1 =  $image1;
 
-            $flight->save();
+        $flight->save();
+
 
         return redirect('/');
 
@@ -167,6 +172,10 @@ class FlightController extends Controller
         $request->file('picture')->move(
             public_path(), $destinationFileName);
         $flight->picture =  $destinationFileName;
+        $image1 = $request->file('image1')->getClientOriginalName();
+        $request->file('image1')->move(
+            public_path(), $image1);
+        $flight->affiliatepic1 =  $image1;
 
         $flight->save();
 

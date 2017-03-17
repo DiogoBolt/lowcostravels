@@ -16,6 +16,7 @@
                 <p>{{$flight->description}}</p>
                 </div>
                 <div style="margin-top:20px;display:inline;float:right;font-size:10px" >{{$flight->tempo}} ago</div>
+                {{--<div  style="width:50%;height:100%;float:left"><img src="{{ URL::to('/').'/'.$flight->affiliatepic1 }}" width="100%" height="100%"></div>--}}
             </div>
             <div style="margin-top:315px;float:right;" > <a href="{{$flight->url}}" target="_blank"class="btn btn-primary">Book Now</a></div>
         </div>
@@ -32,11 +33,12 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
 
-
+        <div align="left"><img src="{{ URL::to('/').'/'.$flight->affiliatepic1 }}" style="margin-top:30px;width:80%"></div>
     </div>
     <div id="newflights" style="position:absolute;right:100px; width:200px; top:60px;">
 
     </div>
+
 </div>
 
 
