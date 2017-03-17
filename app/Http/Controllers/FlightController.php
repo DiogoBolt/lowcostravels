@@ -133,7 +133,10 @@ class FlightController extends Controller
     public function getByZone($zone)
     {
 
-        $flights = Flight::query()->where('zone','=',$zone)->orderBy('created_at','DESC')->get();
+        $flights = Flight::query()->where('zone','=',$zone)->orderBy('created_at','DESC')->get()->each(function($flight){
+            $flight->tempo = $this->time2string(strtotime(date('y-m-d H:i:s'))-strtotime($flight->created_at));
+        }
+        );
 
 
         return view('flights/all',compact('flights') );

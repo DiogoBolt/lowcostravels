@@ -429,6 +429,8 @@ class ComposerStaticInit6d446404908e05301887119872d7c27a
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'IlluminateQueueClosure' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
+        'NewpicsShowflightsTable' => __DIR__ . '/../..' . '/database/migrations/2017_03_16_225947_newpics_showflights_table.php',
+        'NewpicsShowflightsTable2' => __DIR__ . '/../..' . '/database/migrations/2017_03_16_232445_newpics_showflights_table2.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
         'PHPUnit\\Framework\\TestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',

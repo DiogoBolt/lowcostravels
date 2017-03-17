@@ -85,6 +85,8 @@ return array(
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
+    'NewpicsShowflightsTable' => $baseDir . '/database/migrations/2017_03_16_225947_newpics_showflights_table.php',
+    'NewpicsShowflightsTable2' => $baseDir . '/database/migrations/2017_03_16_232445_newpics_showflights_table2.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
     'PHPUnit\\Framework\\BaseTestListener' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
     'PHPUnit\\Framework\\TestCase' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
