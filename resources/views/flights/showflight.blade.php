@@ -48,7 +48,7 @@
     $(document).ready(function() {
 
         var width = $(window).width();
-        if(width<1100) {
+        if(width>1100) {
             $.getJSON("/newflights", function (data) {
                 $('#newflights').empty();
 
