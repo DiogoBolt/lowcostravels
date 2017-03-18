@@ -47,18 +47,20 @@
 <script>
     $(document).ready(function() {
 
-        $.getJSON( "/newflights", function( data ) {
-            $('#newflights').empty();
+        var width = $(window).width();
+        if(width<1100) {
+            $.getJSON("/newflights", function (data) {
+                $('#newflights').empty();
 
-            $('#newflights').append('<h3>New Flights</h3>');
-            for(flight in data)
-            {
+                $('#newflights').append('<h3>New Flights</h3>');
+                for (flight in data) {
 
-                $('#newflights').append(' <div class="panel panel-default"> <div class="panel-heading" style="font-size:12px;"> <i class="fa fa-fw fa-check"></i>'+ data[flight].name+'<div style="font-size:16px;float:right;color:green;">'+ data[flight].price +'€</div> </div> <a href=/flights/'+data[flight].id+'> <div class="panel-body" style="height:100px;"><img src=/'+encodeURI(data[flight].picture)+ ' style=margin-bottom:50px width=90px height=70px> <a href='+data[flight].url+ 'target=_blankclass=btn btn-primary>Book Now</a></div>');
+                    $('#newflights').append(' <div class="panel panel-default"> <div class="panel-heading" style="font-size:12px;"> <i class="fa fa-fw fa-check"></i>' + data[flight].name + '<div style="font-size:16px;float:right;color:green;">' + data[flight].price + '€</div> </div> <a href=/flights/' + data[flight].id + '> <div class="panel-body" style="height:100px;"><img src=/' + encodeURI(data[flight].picture) + ' style=margin-bottom:50px width=90px height=70px> <a href=' + data[flight].url + 'target=_blankclass=btn btn-primary>Book Now</a></div>');
 
 
-            }
-        });
+                }
+            });
+        }
     });
     setInterval(function(){
         $.getJSON( "/newflights", function( data ) {
