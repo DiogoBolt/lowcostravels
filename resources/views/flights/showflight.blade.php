@@ -7,7 +7,7 @@
 
         <div class="panel panel-default" style="max-width:600px;">
             <div class="panel-heading" align="left" style="background-color:#ebebeb">
-                <h4 style="display:inline"><i class="fa fa-fw fa-check"></i>{{$flight->name}}</h4><div style="float:right;color:green;"><h3 style="line-height:0px;margin-top:10px">{{$flight->price}}€</h3></div>
+              {{$flight->name}}<div style="float:right;color:green;"><h4 style="line-height:0px;margin-top:10px">{{$flight->price}}€</h4></div>
             </div>
             <div class="panel-body" style="background-color:#f8f8f8">
 
