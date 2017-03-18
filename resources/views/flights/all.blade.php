@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="fb-page" style="position:absolute; right:10px;top:80px;" data-href="https://www.facebook.com/lowcostravels/?fref=ts" data-tabs="timeline" data-width="230" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/lowcostravels/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/lowcostravels/?fref=ts">Lowcostravels</a></blockquote></div>
+    <div class="fb-page" id="fb" style="position:absolute; right:10px;top:80px;" data-href="https://www.facebook.com/lowcostravels/?fref=ts" data-tabs="timeline" data-width="230" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/lowcostravels/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/lowcostravels/?fref=ts">Lowcostravels</a></blockquote></div>
     <div class="row" style="width:87%">
         <div class="col-lg-12" style="height:30px;">
 
@@ -16,12 +16,12 @@
         @foreach($flights as $flight)
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color:#ebebeb">
-                  <a href="/flights/{{$flight->id}}"> <h4 style="display:inline"><i class="fa fa-fw fa-check"></i>{{$flight->name}}</h4><div style="float:right;color:green;"><h3 style="line-height:0px;margin-top:10px">{{$flight->price}}€</h3></div></a>
+                <div class="panel-heading" style="background-color:#ebebeb;max-height:100px;">
+                  <a href="/flights/{{$flight->id}}"> {{$flight->name}}<div style="float:right;color:green;"><h4 style="line-height:0px;margin-top:10px">{{$flight->price}}€</h4></div></a>
                 </div>
-                <div class="panel-body" style="background-color:#f8f8f8">
-                    <a href="/flights/{{$flight->id}}"> <div style="text-align:center"><img src="{{ URL::to('/').'/'.$flight->picture }}" width="265px" height="200px"></div></a>
-                     <div style="margin-top:20px;display:inline-block" align="right"> <a href="{{$flight->url}}" target="_blank" class="btn btn-primary">Book Now</a></div>
+                <div class="panel-body" style="background-color:#f8f8f8;max-height:350px">
+                    <a href="/flights/{{$flight->id}}"> <div style="text-align:center"><img src="{{ URL::to('/').'/'.$flight->picture }}" style="height:200px"></div></a>
+                     <div style="margin-top:20px;" > <a href="{{$flight->url}}" target="_blank" class="btn btn-primary">Book Now</a></div>
                     {{--<div style="margin-top:20px;display:inline;float:right" align="left"><h4>{{date('Y-m-d H:i',strtotime($flight->created_at))}}</h4></div>--}}
                     <div style="margin-top:20px;display:inline;float:right;font-size:10px" align="left">{{$flight->tempo}} ago</div>
                 </div>
@@ -59,8 +59,30 @@
     <!-- /.row -->
 
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
 
+    $( document ).ready(function() {
+        var width = $(window).width();
+        if(width<1000)
+        {
 
+            $('#fb').hide();
+        }
+    });
+
+    setInterval(function(){
+        var width = $(window).width();
+        if(width<1100)
+        {
+
+            $('#fb').hide();
+        }else{
+            $('#fb').show();
+        }
+    },1000);
+
+</script>
 
 
 
