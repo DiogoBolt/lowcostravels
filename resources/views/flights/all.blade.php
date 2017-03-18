@@ -48,6 +48,7 @@
                 </li>
                 <li>Help you find the best prices</li>
                 <li>Provide an easy way to find flights and travel tips</li>
+                <li>Atencion every offer is temporary!</li>
             </ul>
             <p>Travelling is always an Adventure! Our Website is the best tool to help you with tips for your next vacation. We can provide you with the most pleasant destinations at the lowest cost. You will have access to the best resources online through our links.</p>
         </div>

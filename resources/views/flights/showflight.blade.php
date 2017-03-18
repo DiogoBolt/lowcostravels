@@ -34,7 +34,9 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
 
-        <div align="left"><img src="{{ URL::to('/').'/'.$flight->affiliatepic1 }}" style="margin-top:30px;width:80%"></div>
+        <div align="left"><img src="{{ URL::to('/').'/'.$flight->affiliatepic1 }}" style="margin-top:30px;width:95%;max-width: 630px">
+            <p>Atencion this offer is temporary!</p>
+        </div>
     </div>
     <div id="newflights" style="position:absolute;right:100px; width:200px; top:60px;">
 
