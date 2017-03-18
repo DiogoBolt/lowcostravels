@@ -3,22 +3,23 @@
 @section('content')
 <div class="container">
 
-    <div class="col-md-12" style="padding:10px;" align="center">
+    <div class="col-md-12" style="padding:10px;" >
 
-        <div class="panel panel-default" style="position:absolute; right:300px; height:300px; width:700px; margin-top: 15px">
+        <div class="panel panel-default" style="max-width:600px;">
             <div class="panel-heading" align="left" style="background-color:#ebebeb">
                 <h4 style="display:inline"><i class="fa fa-fw fa-check"></i>{{$flight->name}}</h4><div style="float:right;color:green;"><h3 style="line-height:0px;margin-top:10px">{{$flight->price}}€</h3></div>
             </div>
-            <div class="panel-body" style="position:absolute; height:300px; width:700px;background-color:#f8f8f8">
+            <div class="panel-body" style="background-color:#f8f8f8">
 
-                <div  style="width:50%;height:100%;float:left"><img src="{{ URL::to('/').'/'.$flight->picture }}" width="100%" height="100%"></div>
-                <div align="left" style="font-size:14px;margin-left:340px;">
-                <p>{{$flight->description}}</p>
+                <div class="col-md-6"><img src="{{ URL::to('/').'/'.$flight->picture }}" width="100%" height="100%"></div>
+                <div class="col-md-6">
+                    <p>{{$flight->description}}</p>
                 </div>
-                <div style="margin-top:20px;display:inline;float:right;font-size:10px" >{{$flight->tempo}} ago</div>
+
+                <div style="">{{$flight->tempo}} ago</div>
                 {{--<div  style="width:50%;height:100%;float:left"><img src="{{ URL::to('/').'/'.$flight->affiliatepic1 }}" width="100%" height="100%"></div>--}}
             </div>
-            <div style="margin-top:315px;float:right;" > <a href="{{$flight->url}}" target="_blank"class="btn btn-primary">Book Now</a></div>
+            <div style="margin-top:10px;float:right;" > <a href="{{$flight->url}}" target="_blank"class="btn btn-primary">Book Now</a></div>
         </div>
 
         <div style="margin-top:370px; margin-right:730px;" class="fb-share-button" a href="{{$flight->facebookshare}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Partilhar</a></div>
@@ -45,6 +46,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
+
         $.getJSON( "/newflights", function( data ) {
             $('#newflights').empty();
 
@@ -71,6 +73,19 @@
 
             }
         }); }, 3000);
+
+   setInterval(function(){
+       var width = $(window).width();
+       if(width<1100)
+       {
+
+           $('#newflights').hide();
+       }else{
+           $('#newflights').show();
+       }
+   },1000);
+
+
 
 </script>
 @endsection
