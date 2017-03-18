@@ -44,8 +44,8 @@
                            <input type="file" name="picture">
                        </div>
                        <div class="form-group">
-                           {{ Form::label('image1', 'image1') }}
-                           <input type="file" name="image1">
+                           {{ Form::label('affiliatepic1', 'affiliatepic1') }}
+                           <input type="file" name="affiliatepic1">
                        </div>
                        <div class="form-group">
                            {{ Form::label('Facebookshare', 'facebookshare') }}

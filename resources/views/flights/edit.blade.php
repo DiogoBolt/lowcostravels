@@ -43,6 +43,10 @@
                            <input type="file" name="picture">
                        </div>
                        <div class="form-group">
+                           {{ Form::label('affiliatepic1', 'affiliatepic1') }}
+                           <input type="file" name="affiliatepic1">
+                       </div>
+                       <div class="form-group">
                            {{ Form::label('url', 'url') }}
                            <input name="url" class="form-control" type="text" value="{{$flight->url}}">
                        </div>
