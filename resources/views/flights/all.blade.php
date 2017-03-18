@@ -16,10 +16,10 @@
         @foreach($flights as $flight)
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color:#ebebeb;max-height:100px;">
+                <div class="panel-heading" style="background-color:#ebebeb;height:100px;">
                   <a href="/flights/{{$flight->id}}"> {{$flight->name}}<div style="float:right;color:green;"><h4 style="line-height:0px;margin-top:10px">{{$flight->price}}€</h4></div></a>
                 </div>
-                <div class="panel-body" style="background-color:#f8f8f8;max-height:350px">
+                <div class="panel-body" style="background-color:#f8f8f8;height:350px">
                     <a href="/flights/{{$flight->id}}"> <div style="text-align:center"><img src="{{ URL::to('/').'/'.$flight->picture }}" style="max-width:260px;height:200px"></div></a>
                      <div style="margin-top:20px;" > <a href="{{$flight->url}}" target="_blank" class="btn btn-primary">Book Now</a></div>
                     {{--<div style="margin-top:20px;display:inline;float:right" align="left"><h4>{{date('Y-m-d H:i',strtotime($flight->created_at))}}</h4></div>--}}
