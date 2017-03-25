@@ -7,11 +7,11 @@
         <div class="col-lg-12" style="height:30px;">
 
         </div>
-        <form action="/" method="post">
-            <button class="btn btn-default" type="submit" style="display:inline-block;margin-left:15px">Search</button>
-            <input class="form-control" type="text" name="search" style="width:30%;display:inline-block;margin-bottom:10px">
+        {{--<form action="/" method="post">--}}
+            {{--<button class="btn btn-default" type="submit" style="display:inline-block;margin-left:15px">Search</button>--}}
+            {{--<input class="form-control" type="text" name="search" style="width:30%;display:inline-block;margin-bottom:10px">--}}
 
-        </form>
+        {{--</form>--}}
 
         @foreach($flights as $flight)
         <div class="col-md-4">
@@ -53,7 +53,7 @@
             <p>Travelling is always an Adventure! Our Website is the best tool to help you with tips for your next vacation. We can provide you with the most pleasant destinations at the lowest cost. You will have access to the best resources online through our links.</p>
         </div>
         <div class="col-md-6">
-            <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+            <img class="img-responsive" src="/images/logo.png" alt="">
         </div>
     </div>
 </div>
