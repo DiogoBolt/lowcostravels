@@ -115,7 +115,11 @@
                         </ul>
 
                     </li>
+                    <li>
+                        <a style='color:white;font-size: 1.4em' href="#about">About Us</a>
+                    </li>
                 </ul>
+
                 <ul></ul>
                 <form action="/" method="post">
                     <button class="btn btn-default" type="submit" style="display:inline-block;margin-left:22%">Search</button>

@@ -36,6 +36,7 @@
 
     <!-- Features Section -->
     <div class="row"  style="padding:10px">
+        <div class="featurette" id="about">
         <div class="col-md-12">
             <h2 class="page-header">About Us</h2>
         </div>
@@ -54,6 +55,7 @@
             <img class="img-responsive" src="/images/logo.png" alt="">
         </div>
     </div>
+        </div>
 </div>
     <!-- /.row -->
 
