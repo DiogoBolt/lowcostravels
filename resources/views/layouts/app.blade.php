@@ -40,6 +40,7 @@
     </script>
 
 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -61,6 +62,15 @@
 
         a:hover{
             color:greenyellow !important;
+        }
+        label{
+            font-size:12px !important;
+        }
+        ._2Yxt0UffkEUTzOmXYgxn2s{
+            font-size:12px !important;
+        }
+        ._2Q5YyVOtkLdAcusYyiofsh{
+            font-size:12px !important;
         }
 
     </style>

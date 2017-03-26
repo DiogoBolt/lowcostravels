@@ -1,17 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
+    <div style="margin-top:20px;margin-bottom:20px;width:80%" data-skyscanner-widget="SearchWidget" data-locale="en-GB" data-params="" data-location-name="'London'"></div>
     <div class="fb-page" id="fb" style="position:absolute; right:10px;top:80px;" data-href="https://www.facebook.com/lowcostravels/?fref=ts" data-tabs="timeline" data-width="230" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/lowcostravels/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/lowcostravels/?fref=ts">Lowcostravels</a></blockquote></div>
     <div class="row" style="width:87%">
-        <div class="col-lg-12" style="height:30px;">
 
-        </div>
-        {{--<form action="/" method="post">--}}
-            {{--<button class="btn btn-default" type="submit" style="display:inline-block;margin-left:15px">Search</button>--}}
-            {{--<input class="form-control" type="text" name="search" style="width:30%;display:inline-block;margin-bottom:10px">--}}
 
-        {{--</form>--}}
+
+
 
         @foreach($flights as $flight)
         <div class="col-md-4">
@@ -61,6 +59,7 @@
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://widgets.skyscanner.net/widget-server/js/loader.js"></script>
 <script>
 
     $( document ).ready(function() {
