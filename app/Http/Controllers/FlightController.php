@@ -59,7 +59,7 @@ class FlightController extends Controller
                 }
                 );
         }else {
-            $flights = Flight::query()->where('created_at','>',Carbon::now()->subMonth(2)->orderBy('created_at', 'DESC')
+            $flights = Flight::query()->where('created_at','>',Carbon::now()->subMonth(2))->orderBy('created_at', 'DESC')
                 ->get()->each(function($flight){
                     $flight->tempo = $this->time2string(strtotime(date('y-m-d H:i:s'))-strtotime($flight->created_at));
                 }
