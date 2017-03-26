@@ -46,7 +46,9 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <script src="/js/jquery.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 
 
@@ -78,7 +80,6 @@
 
     <body id="app-layout">
 
-    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
         <div class="container">
@@ -86,7 +87,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div  class="navbar-header" >
 
-                <a class="navbar-brand" href="/"><img src="/images/logo.png" style="vertical-align:top !important; height:30px;"></a>
+                <a class="navbar-brand" href="/"><img src="/images/logo.png" style="max-width:55px; margin-top: -15px;"></a>
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -104,7 +105,7 @@
 
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" style='color:white;font-size: 1.6em'class="dropdown-toggle" data-toggle="dropdown" role="button" >Flights by Zone</a>
+                        <a href="#" style='color:white;font-size: 1.6em' class="dropdown-toggle" data-toggle="dropdown" role="button" >Flights by Zone</a>
                         <ul class="dropdown-menu">
                             <li><a href="/flightsbyzone/europe">Europe</a></li>
                             <li><a href="/flightsbyzone/asia">Asia</a></li>
@@ -118,12 +119,12 @@
                     <li>
                         <a style='color:white;font-size: 1.4em' href="#about">About Us</a>
                     </li>
-                </ul>
+               </ul>
 
-                <ul></ul>
+
                 <form action="/" method="post">
-                    <button class="btn btn-default" type="submit" style="display:inline-block;margin-left:22%">Search</button>
-                    <input class="form-control" type="text" name="search" style="width:25%;display:inline-block;margin-bottom:10px">
+                    <button class="btn btn-default" type="submit" style="display:inline;">Search</button>
+                    <input class="form-control" type="text" name="search" style="width:25%;display:inline;">
 
                 </form>
             </div>
