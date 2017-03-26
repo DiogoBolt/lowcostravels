@@ -93,7 +93,7 @@ class FlightController extends Controller
         $flight->picture =  $destinationFileName;
         $affiliatepic1 = $request->file('affiliatepic1')->getClientOriginalName();
         $request->file('affiliatepic1')->move(
-            public_path(), $affiliatepic1);
+            public_path().'/'.(Flight::all()->last()->id+1), $affiliatepic1);
         $flight->affiliatepic1 =  $affiliatepic1;
 
         $flight->save();
