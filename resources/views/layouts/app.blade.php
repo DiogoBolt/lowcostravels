@@ -86,22 +86,22 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div  class="navbar-header" >
 
-                {{--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">--}}
-                    {{--<span class="sr-only">Toggle navigation</span>--}}
-                    {{--<span class="icon-bar"></span>--}}
-                    {{--<span class="icon-bar"></span>--}}
-                    {{--<span class="icon-bar"></span>--}}
-                {{--</button>--}}
+                <a class="navbar-brand" href="/"><img src="/images/logo.png" style="vertical-align:top !important; height:30px;"></a>
 
-                {{--<a class="navbar-brand" href="/">LowCosTravels</a>--}}
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
             </div>
 
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <div style="float:left">
-                    <a href="/">  <img src="/images/logo.png"  height="55px"> </a>
-                </div>
+
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a href="#" style='color:white;font-size: 1.6em'class="dropdown-toggle" data-toggle="dropdown" role="button" >Flights by Zone</a>
