@@ -64,10 +64,12 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
         <div class="container">
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div  class="navbar-header" >
+
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -77,13 +79,13 @@
 
                 {{--<a class="navbar-brand" href="/">LowCosTravels</a>--}}
             </div>
-            <div>
-                <div class="col-md-1"><img src="/images/logo.png" width="100%" height="100%"></div>
+
+            <div style="alignment: left; margin-top: 5px;">
+                <a href="/"/> <div class="col-md-1">  <img src="/images/logo.png" width="70px" height="55px"></div>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-
                     <li class="dropdown">
                         <a href="#" style='font-size: 1.6em'; class="dropdown-toggle" data-toggle="dropdown" role="button" >Flights by Zone</a>
                         <ul class="dropdown-menu">
@@ -100,7 +102,7 @@
                 <ul></ul>
                 <form action="/" method="post">
                     <button class="btn btn-default" type="submit" style="display:inline-block;margin-left:22%">Search</button>
-                    <input class="form-control" type="text" name="search" style="width:30%;display:inline-block;margin-bottom:10px">
+                    <input class="form-control" type="text" name="search" style="width:25%;display:inline-block;margin-bottom:10px">
 
                 </form>
             </div>
