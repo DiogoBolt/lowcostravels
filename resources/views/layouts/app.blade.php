@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta name="author" content="LowCostravels">
+    <meta name="verification" content="4e7c4154c463887d03a1d53383f8675e" />
 
     <title>Low Cost Travels</title>
 
@@ -57,6 +57,10 @@
             color:black !important;
         }
 
+        a:hover{
+            color:greenyellow !important;
+        }
+
     </style>
     </head >
 
@@ -80,14 +84,15 @@
                 {{--<a class="navbar-brand" href="/">LowCosTravels</a>--}}
             </div>
 
-            <div style="alignment: left; margin-top: 5px;">
-                <a href="/"/> <div class="col-md-1">  <img src="/images/logo.png" width="70px" height="55px"></div>
-            </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div style="float:left">
+                    <a href="/">  <img src="/images/logo.png"  height="55px"> </a>
+                </div>
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" style='font-size: 1.6em'; class="dropdown-toggle" data-toggle="dropdown" role="button" >Flights by Zone</a>
+                        <a href="#" style='color:white;font-size: 1.6em'class="dropdown-toggle" data-toggle="dropdown" role="button" >Flights by Zone</a>
                         <ul class="dropdown-menu">
                             <li><a href="/flightsbyzone/europe">Europe</a></li>
                             <li><a href="/flightsbyzone/asia">Asia</a></li>
