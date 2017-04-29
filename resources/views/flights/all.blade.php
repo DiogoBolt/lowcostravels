@@ -7,13 +7,13 @@
     <div class="fb-page" id="fb" style="position:absolute; right:10px;top:80px;" data-href="https://www.facebook.com/lowcostravels/?fref=ts" data-tabs="timeline" data-width="230" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/lowcostravels/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/lowcostravels/?fref=ts">Lowcostravels</a></blockquote></div>
     <div class="row" style="width:87%">
 
-        <div class="col-md-12">
+        <div class="col-md-12" style="margin-bottom: 20px">
         <form action="/" method="post">
 
            <input type="date" name="from" value="{{Session::has('from')? Session::get('from'):''}}">
            <input type="date" name="to" value="{{Session::has('to')? Session::get('to'):''}}">
 
-            <button class="btn btn-default" type="submit" style="display:inline">Filter</button>
+            <button class="btn btn-default" type="submit" style="display:inline">Filter by date</button>
 
 
         </form>
