@@ -7,9 +7,30 @@
     <div class="fb-page" id="fb" style="position:absolute; right:10px;top:80px;" data-href="https://www.facebook.com/lowcostravels/?fref=ts" data-tabs="timeline" data-width="230" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/lowcostravels/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/lowcostravels/?fref=ts">Lowcostravels</a></blockquote></div>
     <div class="row" style="width:87%">
 
+        <div class="col-md-12">
+        <form action="/" method="post">
+            <select name="month" class="form-control" style="display:inline;width:25%;margin-bottom:25px">
+                @if(Session::has('month'))
+                <option value="{{Session::get('month')}}">{{DateTime::createFromFormat('!m', (int)Session::get('month'))->format('F')}}</option>
+                @endif
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <button class="btn btn-default" type="submit" style="display:inline">Filter</button>
 
 
-
+        </form>
+        </div>
 
         @foreach($flights as $flight)
         <div class="col-md-4">

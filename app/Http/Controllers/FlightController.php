@@ -17,10 +17,12 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
 
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
-use Session, View, Response, Auth, Mail, Validator;
+use View, Response, Auth, Mail, Validator;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\File\File;
+
 
 /**
  * Class ListController
@@ -66,6 +68,18 @@ class FlightController extends Controller
                 );
         }
 
+        if(isset($inputs['month'])) {
+            Session::put('month',$inputs['month']);
+            foreach($flights as $flight)
+            {
+                $flight->month = $inputs['month'];
+            }
+            $flights = $flights->filter(function ($flight) {
+
+                return date('m',strtotime($flight->enddate)) == $flight->month;
+            });
+        }
+       
         return view('flights/all', compact('flights'));
     }
 
