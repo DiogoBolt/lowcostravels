@@ -9,23 +9,8 @@
 
         <div class="col-md-12">
         <form action="/" method="post">
-            <select name="month" class="form-control" style="display:inline;width:25%;margin-bottom:25px">
-                @if(Session::has('month'))
-                <option value="{{Session::get('month')}}">{{DateTime::createFromFormat('!m', (int)Session::get('month'))->format('F')}}</option>
-                @endif
-                <option value="01">January</option>
-                <option value="02">February</option>
-                <option value="03">March</option>
-                <option value="04">April</option>
-                <option value="05">May</option>
-                <option value="06">June</option>
-                <option value="07">July</option>
-                <option value="08">August</option>
-                <option value="09">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-            </select>
+           <input type="date" name="from" value="{{Session::has('from')? Session::get('from'):''}}">
+           <input type="date" name="to" value="{{Session::has('to')? Session::get('to'):''}}">
             <button class="btn btn-default" type="submit" style="display:inline">Filter</button>
 
 

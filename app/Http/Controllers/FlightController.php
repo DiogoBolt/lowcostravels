@@ -53,32 +53,53 @@ class FlightController extends Controller
     public function Flights(Request $request)
     {
         $inputs = $request->all();
+
+        if (isset($inputs['from']) and isset($inputs['to'])) {
+            Session::forget('from');
+            Session::forget('to');
+            if($inputs['from'] == '')
+            {
+                Session::put('from',date('1999-01-01'));
+            }else{
+                Session::put('from',$inputs['from']);
+            }
+            if($inputs['to'] == '')
+            {
+                Session::put('to',date('2055-1-1'));
+            }else{
+                Session::put('to',$inputs['to']);
+            }
+        }
+
+        if(Session::has('from') and Session::has('to') )
+        {
+            $from = date('Y-m-d', strtotime(Session::get('from')));
+            $to = date('Y-m-d', strtotime(Session::get('to')));
+
+        }else{
+            $from = date('Y-m-01');
+            $to = date('Y-m-d');
+        }
+
+
         if(isset($inputs['search']))
         {
-            $flights = Flight::query()->orderBy('created_at','DESC')->where('name', 'like', '%' . $inputs['search'] . '%')
+
+            $flights = Flight::query()->where('enddate','>',$from)->where('enddate','<',$to)->orderBy('created_at','DESC')->where('name', 'like', '%' . $inputs['search'] . '%')
                 ->get()->each(function($flight){
                     $flight->tempo = $this->time2string(strtotime(date('y-m-d H:i:s'))-strtotime($flight->created_at));
                 }
                 );
         }else {
-            $flights = Flight::query()->where('created_at','>',Carbon::now()->subMonth(2))->orderBy('created_at', 'DESC')
+
+            $flights = Flight::query()->where('enddate','>',$from)->where('enddate','<',$to)->where('created_at','>',Carbon::now()->subMonth(2))->orderBy('created_at', 'DESC')
                 ->get()->each(function($flight){
                     $flight->tempo = $this->time2string(strtotime(date('y-m-d H:i:s'))-strtotime($flight->created_at));
                 }
                 );
         }
 
-        if(isset($inputs['month'])) {
-            Session::put('month',$inputs['month']);
-            foreach($flights as $flight)
-            {
-                $flight->month = $inputs['month'];
-            }
-            $flights = $flights->filter(function ($flight) {
 
-                return date('m',strtotime($flight->enddate)) == $flight->month;
-            });
-        }
        
         return view('flights/all', compact('flights'));
     }
