@@ -40,7 +40,7 @@ class FlightController extends Controller
     }
 
     private function time2string($timeline) {
-        $periods = array( 'hour' => 3600,'minute' => 60);
+        $periods = array( 'day' => 86400, 'hour' => 3600,'minute' => 60);
         $ret='';
         foreach($periods AS $name => $seconds){
             $num = floor($timeline / $seconds);
