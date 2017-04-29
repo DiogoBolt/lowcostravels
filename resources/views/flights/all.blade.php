@@ -29,7 +29,7 @@
 
 
 
-                        <div style="float:right;color:green;"><h4 style="line-height:0px;margin-top:12px">{{$flight->price}}€</h4></div></a>
+                        <div style="float:right;color:green;"><h3 style="line-height:0px;margin-top:12px">{{$flight->price}}€</h3></div></a>
                 </div>
                 <div class="panel-body" style="background-color:#f8f8f8;height:280px;min-width: 290px; ">
                     <a href="/flights/{{$flight->id}}"> <div style="text-align:center"><img src="{{ URL::to('/').'/'.$flight->picture }}" style="max-width:260px;height:200px"></div></a>
