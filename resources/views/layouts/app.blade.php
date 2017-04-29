@@ -10,7 +10,7 @@
     <meta name="keywords" content="cheap flight deals, cheap flights, travel deals, air tickets, air deals, save money, holiday, flights low cost, lowcostravels, low cost travels, last minute flights, voos baratos, viagens baratas, flights promotions, promocoes de viagens">
     <meta name="author" content="LowCostravels">
     <meta name="verification" content="4e7c4154c463887d03a1d53383f8675e" />
-    <meta property="og:url" content="http://www.lowcostravels.com">
+    {{--<meta property="og:url" content="http://www.lowcostravels.com">--}}
 
     <title>Low Cost Travels</title>
 
@@ -119,14 +119,23 @@
                     <li>
                         <a style='color:white;font-size: 1.4em' href="#about">About Us</a>
                     </li>
+                    <li>
+                        <a style='color:white;font-size: 1.4em' href="#contact">Contact</a>
+                    </li>
                </ul>
 
 
-                <form action="/" method="post">
+                <form action="/" method="post" style="margin-top:5px;">
                     <button class="btn btn-default" type="submit" style="display:inline;">Search</button>
                     <input class="form-control" type="text" name="search" style="width:25%;display:inline;">
 
                 </form>
+                @if(Auth::user())
+               <a href="/backoffice/contacts"> <div style="float:right;color:white;">
+                    Contactos: <span id="contacts" style="color:white"></span>
+                </div>
+               </a>
+                    @endif
             </div>
 
             <!-- /.navbar-collapse -->
@@ -156,11 +165,18 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
-
+  
     @yield('scripts')
+    <script>
+        setInterval(function(){
+            $.getJSON("/contacts", function (data) {
+                $('#contacts').empty();
+
+                $('#contacts').html(data)
+            });
+        },2000);
+
+    </script>
     <script>
     C = {
     // Number of days before the cookie expires, and the banner reappears

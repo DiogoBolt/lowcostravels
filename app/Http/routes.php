@@ -19,6 +19,8 @@ Route::auth();
 Route::get('/flights/{id}', 'FlightController@showFlight');
 Route::get('/flightsbyzone/{zone}', 'FlightController@getByZone');
 Route::get('/newflights', 'FlightController@newFlights');
+Route::post('/contactus', 'FlightController@contactUs');
+Route::get('/contacts', 'FlightController@contacts');
 
 
 
@@ -33,6 +35,9 @@ route::group(['middleware'=>'auth'],function() {
     Route::post('/highlightflight', 'FlightController@highlightFlight');
     Route::get('backoffice/flights/edit/{id}', 'FlightController@editFlight');
     Route::post('/editflight', 'FlightController@saveFlight');
+    Route::get('backoffice/contacts', 'FlightController@allcontacts');
+
+
 });
 
 

@@ -6,12 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'AddFacebookshare' => $baseDir . '/database/migrations/2017_03_08_224552_add_facebookshare.php',
-    'AddFacebookshareToFlights' => $baseDir . '/database/migrations/2017_03_08_224308_add_facebookshare_to_flights.php',
-    'AddFlights' => $baseDir . '/database/migrations/2017_02_20_102409_add_flights.php',
-    'AddUrlToFlights' => $baseDir . '/database/migrations/2017_03_10_235420_add_url_to_flights.php',
-    'AddZoneToFlight' => $baseDir . '/database/migrations/2017_02_23_172017_add_zone_to_flight.php',
-    'Adicionarcountry' => $baseDir . '/database/migrations/2017_03_03_221600_adicionarcountry.php',
+    'AddContacts' => $baseDir . '/database/migrations/2017_04_02_211641_addContacts.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
@@ -85,7 +80,6 @@ return array(
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
-    'NewpicsShowflightsTable' => $baseDir . '/database/migrations/2017_03_16_225947_newpics_showflights_table.php',
     'NewpicsShowflightsTable2' => $baseDir . '/database/migrations/2017_03_16_232445_newpics_showflights_table2.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
     'PHPUnit\\Framework\\BaseTestListener' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -526,5 +520,4 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
-    'Users' => $baseDir . '/database/migrations/2016_10_14_104524_users.php',
 );

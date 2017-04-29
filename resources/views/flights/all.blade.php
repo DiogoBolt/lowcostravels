@@ -13,15 +13,21 @@
 
         @foreach($flights as $flight)
         <div class="col-md-4">
-            <div class="panel panel-default" style=";min-width: 292px;">
-                <div class="panel-heading" style="background-color:#ebebeb;height:100px;min-width: 290px;">
-                  <a href="/flights/{{$flight->id}}"> {{$flight->name}}<div style="float:right;color:green;"><h4 style="line-height:0px;margin-top:10px">{{$flight->price}}€</h4></div></a>
+            <div class="panel panel-default" style=";height:360px;min-width: 292px;">
+                <div class="panel-heading" style="background-color:#ebebeb;height:75px;min-width: 290px;">
+                    <div class="col-lg-pull-0">
+                        <a href="/flights/{{$flight->id}}"> {{$flight->name}}</a>
+                    </div>
+
+
+
+                        <div style="float:right;color:green;"><h4 style="line-height:0px;margin-top:12px">{{$flight->price}}€</h4></div></a>
                 </div>
-                <div class="panel-body" style="background-color:#f8f8f8;height:350px;min-width: 290px; ">
+                <div class="panel-body" style="background-color:#f8f8f8;height:280px;min-width: 290px; ">
                     <a href="/flights/{{$flight->id}}"> <div style="text-align:center"><img src="{{ URL::to('/').'/'.$flight->picture }}" style="max-width:260px;height:200px"></div></a>
                      <div style="margin-top:20px;" > <a href="{{$flight->url}}" target="_blank" class="btn btn-primary">Book Now</a></div>
                     {{--<div style="margin-top:20px;display:inline;float:right" align="left"><h4>{{date('Y-m-d H:i',strtotime($flight->created_at))}}</h4></div>--}}
-                    <div style="position:absolute;bottom:30px;right:25px;font-size:10px">{{$flight->tempo}} ago</div>
+                    <div style="position:absolute;bottom:45px;right:25px;font-size:10px">{{$flight->tempo}} ago</div>
                 </div>
             </div>
         </div>
@@ -56,6 +62,27 @@
         </div>
     </div>
         </div>
+
+    <div class="featurette" id="contact">
+        <div class="col-md-12">
+            <h2 class="page-header">Contact</h2>
+        </div>
+        <div class="col-md-12">
+            <form action="/contactus" method="post">
+                <div class="form-group">
+                    Email : <input class="form-control" name="email">
+
+                    Message: <textarea class="form-control" name="message">
+
+                    </textarea>
+                    <button class="btn btn-default" type="submit">Send</button>
+
+                </div>
+
+            </form>
+        </div>
+
+    </div>
 </div>
     <!-- /.row -->
 

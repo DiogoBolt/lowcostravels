@@ -5,7 +5,7 @@
 
     <div class="col-md-12" style="padding:10px;" >
 
-        <div class="panel panel-default" style="max-width:600px;">
+        <div class="panel panel-default" style="max-width:715px;">
             <div class="panel-heading" align="left" style="background-color:#ebebeb">
               {{$flight->name}}<div style="float:right;color:green;"><h4 style="line-height:0px;margin-top:10px">{{$flight->price}}€</h4></div>
             </div>
@@ -34,8 +34,8 @@
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
 
-        <div align="left"><img src="{{ URL::to('/').'/'.$flight->affiliatepic1 }}" style="margin-top:30px;width:95%;max-width: 630px">
-            <p>Atencion this offer is temporary!</p>
+        <div align="left"><img src="{{ URL::to('/').'/'.$flight->affiliatepic1 }}" style="margin-top:30px;width:95%;max-width: 715px">
+            <p>Atention this offer is temporary!</p>
         </div>
     </div>
     <div id="newflights" style="position:absolute;right:100px; width:200px; top:60px;">

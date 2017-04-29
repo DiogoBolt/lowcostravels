@@ -4,6 +4,7 @@
 namespace app\Http\Controllers;
 
 
+use App\Contact;
 use App\Flight;
 use App\Http\Controllers\Controller;
 use App\Lib\Reports\ReportCar;
@@ -87,15 +88,14 @@ class FlightController extends Controller
         $flight->country=$inputs['country'];
         $flight->url=$inputs['url'];
         $flight->facebookshare=$inputs['facebookshare'];
-        $destinationFileName = $request->file('picture')->getClientOriginalName();
+        $destinationFileName = $request->file('picture')->getClientOriginalName() . (Flight::all()->last()->id+1);
         $request->file('picture')->move(
-           public_path(), $destinationFileName);
+            public_path().'/', $destinationFileName);
         $flight->picture =  $destinationFileName;
-        $affiliatepic1 = $request->file('affiliatepic1')->getClientOriginalName();
+        $affiliatepic1 = $request->file('affiliatepic1')->getClientOriginalName() . (Flight::all()->last()->id+1).'afiliado';
         $request->file('affiliatepic1')->move(
-            public_path().'/'.(Flight::all()->last()->id+1), $affiliatepic1);
+            public_path().'/', $affiliatepic1);
         $flight->affiliatepic1 =  $affiliatepic1;
-
         $flight->save();
 
 
@@ -168,13 +168,13 @@ class FlightController extends Controller
         $flight->country=$inputs['country'];
         $flight->url=$inputs['url'];
         $flight->facebookshare=$inputs['facebookshare'];
-        $destinationFileName = $request->file('picture')->getClientOriginalName();
+        $destinationFileName = $request->file('picture')->getClientOriginalName() . (Flight::all()->last()->id+1);
         $request->file('picture')->move(
-            public_path(), $destinationFileName);
+            public_path().'/', $destinationFileName);
         $flight->picture =  $destinationFileName;
-        $affiliatepic1 = $request->file('affiliatepic1')->getClientOriginalName();
+        $affiliatepic1 = $request->file('affiliatepic1')->getClientOriginalName() . (Flight::all()->last()->id+1).'afiliado';
         $request->file('affiliatepic1')->move(
-            public_path(), $affiliatepic1);
+            public_path().'/', $affiliatepic1);
         $flight->affiliatepic1 =  $affiliatepic1;
 
         $flight->save();
@@ -189,6 +189,35 @@ class FlightController extends Controller
 
         return json_encode($flights);
     }
+
+    public function contactUs(Request $request)
+    {
+        $inputs = $request->all();
+        $email = $inputs['email'];
+        $message = $inputs['message'];
+
+        $contact = new Contact();
+        $contact->email = $email;
+        $contact->message = $message;
+        $contact->read = 0;
+        $contact->save();
+        return back();
+    }
+
+    public function contacts()
+    {
+        $contacts = Contact::where('read','=',0)->count();
+        return $contacts;
+    }
+
+    public function allcontacts()
+    {
+        $contacts = Contact::all();
+
+        return view('backoffice/contacts', compact('contacts'));
+
+    }
+
 
 
 

@@ -350,12 +350,7 @@ class ComposerStaticInit6d446404908e05301887119872d7c27a
     );
 
     public static $classMap = array (
-        'AddFacebookshare' => __DIR__ . '/../..' . '/database/migrations/2017_03_08_224552_add_facebookshare.php',
-        'AddFacebookshareToFlights' => __DIR__ . '/../..' . '/database/migrations/2017_03_08_224308_add_facebookshare_to_flights.php',
-        'AddFlights' => __DIR__ . '/../..' . '/database/migrations/2017_02_20_102409_add_flights.php',
-        'AddUrlToFlights' => __DIR__ . '/../..' . '/database/migrations/2017_03_10_235420_add_url_to_flights.php',
-        'AddZoneToFlight' => __DIR__ . '/../..' . '/database/migrations/2017_02_23_172017_add_zone_to_flight.php',
-        'Adicionarcountry' => __DIR__ . '/../..' . '/database/migrations/2017_03_03_221600_adicionarcountry.php',
+        'AddContacts' => __DIR__ . '/../..' . '/database/migrations/2017_04_02_211641_addContacts.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
@@ -429,7 +424,6 @@ class ComposerStaticInit6d446404908e05301887119872d7c27a
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'IlluminateQueueClosure' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
-        'NewpicsShowflightsTable' => __DIR__ . '/../..' . '/database/migrations/2017_03_16_225947_newpics_showflights_table.php',
         'NewpicsShowflightsTable2' => __DIR__ . '/../..' . '/database/migrations/2017_03_16_232445_newpics_showflights_table2.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -870,7 +864,6 @@ class ComposerStaticInit6d446404908e05301887119872d7c27a
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
-        'Users' => __DIR__ . '/../..' . '/database/migrations/2016_10_14_104524_users.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
