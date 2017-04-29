@@ -9,7 +9,7 @@
 
         <div class="col-md-12">
         <form action="/" method="post">
-            <select name="month" class="form-control" style="display:inline;width:25%;margin-bottom:25px">
+            <select name="month" class="form-control" style="display:inline;width:150px;margin-bottom:25px">
                 @if(Session::has('month'))
                 <option value="{{Session::get('month')}}">{{DateTime::createFromFormat('!m', (int)Session::get('month'))->format('F')}}</option>
                 @endif
