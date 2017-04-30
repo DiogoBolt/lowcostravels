@@ -12,7 +12,7 @@
 
                        <div class="form-group">
                            {{ Form::label('Name', 'Name') }}
-                           {{ Form::text('name', null, ['class' => 'form-control']) }}
+                           <input type="text" name="name" maxlength="71" class="form-control" >
                        </div>
                        <div class="form-group">
                            {{ Form::label('description', 'description') }}
