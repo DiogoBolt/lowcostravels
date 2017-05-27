@@ -87,14 +87,14 @@ class FlightController extends Controller
         {
 
             $flights = Flight::query()->where('enddate','>',$from)->where('enddate','<',$to)->orderBy('created_at','DESC')->where('name', 'like', '%' . $inputs['search'] . '%')
-                ->get()->each(function($flight){
+                ->take(25)->get()->each(function($flight){
                     $flight->tempo = $this->time2string(strtotime(date('y-m-d H:i:s'))-strtotime($flight->created_at));
                 }
                 );
         }else {
 
             $flights = Flight::query()->where('enddate','>',$from)->where('enddate','<',$to)->where('created_at','>',Carbon::now()->subMonth(2))->orderBy('created_at', 'DESC')
-                ->get()->each(function($flight){
+                ->take(25)->get()->each(function($flight){
                     $flight->tempo = $this->time2string(strtotime(date('y-m-d H:i:s'))-strtotime($flight->created_at));
                 }
                 );
