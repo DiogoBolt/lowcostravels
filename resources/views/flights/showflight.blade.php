@@ -166,7 +166,7 @@
                 <div style="">{{$flight->tempo}} ago</div>
                 {{--<div  style="width:50%;height:100%;float:left"><img src="{{ URL::to('/').'/'.$flight->affiliatepic1 }}" width="100%" height="100%"></div>--}}
             </div>
-            <div style="margin-top:10px;float:right;" > <a href="{{$flight->url}}" target="_blank"class="btn btn-primary">Book Now</a></div>
+            <div style="margin-top:10px;float:right;" > <a href="{{$flight->url}}" target="_blank"class="btn btn-primary">Fly LowCost</a></div>
         </div>
 
         <div class="fb-share-button" a href="{{$flight->facebookshare}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Partilhar</a></div>
