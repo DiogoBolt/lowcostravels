@@ -98,6 +98,23 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://widgets.skyscanner.net/widget-server/js/loader.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+   "name": "Low Cost Travels",
+  "alternateName": "Low Cost Flights",
+  "url": "http://www.lowcostravels.com",
+  "logo": "http://www.lowcostravels.com/images/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/lowcostravels/",
+    "https://twitter.com/Low_CostTravels",
+    "https://twitter.com/Low_CostTravels",
+    "https://lowcostravels.tumblr.com/"
+  ]
+}
+</script>
 <script>
 
     $( document ).ready(function() {
