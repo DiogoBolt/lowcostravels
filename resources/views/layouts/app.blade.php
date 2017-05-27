@@ -10,8 +10,6 @@
     <meta name="keywords" content="cheap flight deals, cheap flights, travel deals, air tickets, air deals, save money, holiday, flights low cost, lowcostravels, low cost travels, last minute flights, voos baratos, viagens baratas, flights promotions, promocoes de viagens">
     <meta name="author" content="LowCostravels">
     <meta name="verification" content="4e7c4154c463887d03a1d53383f8675e" />
-
-
     <title>Low Cost Travels</title>
 
     <!-- Bootstrap Core CSS -->

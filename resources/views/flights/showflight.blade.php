@@ -10,6 +10,8 @@
     <meta name="keywords" content="{{$flight->country}},{{$flight->zone}} ,cheap flights, travel deals, air tickets, air deals, holiday, flights low cost, lowcostravels, low cost travels, last minute flights, voos baratos, viagens baratas, flights promotions, promocoes de viagens">
     <meta name="author" content="LowCostravels">
     <meta name="verification" content="4e7c4154c463887d03a1d53383f8675e" />
+    <meta property="og:image" content="{{$flight->picture}}">
+
 
 
     <title>Low Cost Travels</title>
