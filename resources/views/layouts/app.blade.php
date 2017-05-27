@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="LowCosTravels is the best tool to help you with tips for your next vacation. We can provide you with the most pleasant destinations at the lowest cost. You will have access to the best resources online through our links.">
+    <meta name="description" content="LowCosTravels is the best tool to help you with tips for your next vacation.">
     <meta name="keywords" content="cheap flight deals, cheap flights, travel deals, air tickets, air deals, save money, holiday, flights low cost, lowcostravels, low cost travels, last minute flights, voos baratos, viagens baratas, flights promotions, promocoes de viagens">
     <meta name="author" content="LowCostravels">
     <meta name="verification" content="4e7c4154c463887d03a1d53383f8675e" />
