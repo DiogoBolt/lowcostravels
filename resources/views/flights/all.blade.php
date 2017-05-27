@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="container">
+    <h1>Low Cost Travels</h1>
     <div style="margin-top:20px;margin-bottom:20px;width:80%" data-skyscanner-widget="SearchWidget" data-locale="en-GB" data-params="" data-location-name="'London'"></div>
     <div class="fb-page" id="fb" style="position:absolute; right:10px;top:80px;" data-href="https://www.facebook.com/lowcostravels/?fref=ts" data-tabs="timeline" data-width="230" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/lowcostravels/?fref=ts" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/lowcostravels/?fref=ts">Lowcostravels</a></blockquote></div>
     <div class="row" style="width:87%">
