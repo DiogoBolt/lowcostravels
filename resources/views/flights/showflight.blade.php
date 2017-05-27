@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{$flight->description}}">
+    <meta name="description" content="{{$flight->name}}">
     <meta name="keywords" content="{{$flight->country}},{{$flight->zone}} ,cheap flights, travel deals, air tickets, air deals, holiday, flights low cost, lowcostravels, low cost travels, last minute flights, voos baratos, viagens baratas, flights promotions, promocoes de viagens">
     <meta name="author" content="LowCostravels - Flight Deals">
     <meta name="verification" content="4e7c4154c463887d03a1d53383f8675e" />
